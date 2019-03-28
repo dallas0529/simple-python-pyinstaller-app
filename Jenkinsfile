@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             agent {
-                label {
-                    'jenkins-02' 
+                label 'jenkins-02' 
                 }
             }
             steps {

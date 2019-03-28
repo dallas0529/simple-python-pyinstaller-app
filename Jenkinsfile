@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Build') { 
             agent {
-                docker {
-                    image 'python:2-alpine' 
+                label {
+                    'jenkins-02' 
                 }
             }
             steps {

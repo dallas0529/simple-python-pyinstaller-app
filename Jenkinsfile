@@ -1,6 +1,6 @@
 pipeline {
    agent {
-      label 'jenkins-02'
+      label 'jenkins-01'
     }
     stages {
         stage('Build') { 

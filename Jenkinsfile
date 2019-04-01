@@ -1,12 +1,9 @@
 pipeline {
-    agent none 
+    agent {
+        label 'jenkins-01'
+    }
     stages {
-        stage('Build') { 
-            agent {
-                docker {
-                    image 'python:2-alpine' 
-                }
-            }
+        stage('Build') {
             steps {
                 sh 'python -m py_compile sources/add2vals.py sources/calc.py' 
             }
